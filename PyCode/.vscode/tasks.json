@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Drowiness Test",
+            "type": "shell",
+            "command": "py detect_drowsiness.py",
+            "problemMatcher": []
+        }
+         {
+            "label": "Drow",
+            "type": "shell",
+            "command": "py drow.py",
+            "problemMatcher": []
+        }
+    ]
+}
