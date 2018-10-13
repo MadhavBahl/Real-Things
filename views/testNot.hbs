@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Test Notifications</h1>
+    <p>TESTING</p>
 
     <button id="notify">Notify me!</button>
 
@@ -17,8 +18,8 @@
     <script>
         $("#notify").click (function () {
             console.log('Notification');
-            $.get("/sendMessage", function(data, status){
-                console.log("Data: " + data + "\nStatus: " + status);
+            $.get("http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=8800467915&authkey=242704A8yXSd0INO5bc24274&message=BHAIAIIA CHAL JAAAA", function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
             });
         }); 
     </script>
