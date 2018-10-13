@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test Notifications</h1>
+
+    <button onclick="notifyMe()">Notify me!</button>
+
+    <script>
+        // request permission on page load
+        document.addEventListener('DOMContentLoaded', function () {
+        if (!Notification) {
+            alert('Desktop notifications not available in your browser. Try Chromium.'); 
+            return;
+        }
+
+        if (Notification.permission !== "granted")
+            Notification.requestPermission();
+        });
+
+        function notifyMe() {
+        if (Notification.permission !== "granted")
+            Notification.requestPermission();
+        else {
+            var notification = new Notification('Notification title', {
+            icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+            body: "Hey there! You've been notified!",
+            });
+
+            notification.onclick = function () {
+            window.open("http://stackoverflow.com/a/13328397/1269037");      
+            };
+
+        }
+
+        }
+    </script>
+</body>
+</html>
