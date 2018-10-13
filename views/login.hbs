@@ -10,12 +10,12 @@
 <body>
 
     <div class="login-page">
-        <div class="form">
-            <form class="register-form">
-                <input type="text" placeholder="name" />
-                <input type="password" placeholder="password" />
-                <input type="text" placeholder="email address" />
-                <button>create</button>
+        <div class="form hoverable">
+            <form class="register-form" action="/users/register" method="POST">
+                <input type="text" name="name" placeholder="name" />
+                <input type="password" name="password" placeholder="password" />
+                <input type="email" name="email" placeholder="email address" />
+                <button>Sign Up</button>
                 <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
             <form class="login-form">

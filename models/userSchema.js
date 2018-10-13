@@ -8,8 +8,7 @@ var userSchema = new Schema({
 	},
 	username: {
 		type: String,
-		required: false,
-		unique: true
+		required: false
 	},
 	email: {
 		type: String,
