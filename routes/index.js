@@ -20,7 +20,7 @@ router.get('/sendMessage', (req, res) => {
 		}
 		console.log('body:', body); // Print the HTML for the Google homepage.
 		console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-		res.send(body);
+		res.render('dashboard.hbs');
 	});
 });
 
