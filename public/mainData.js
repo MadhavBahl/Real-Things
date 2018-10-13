@@ -7,7 +7,7 @@ var mainStatus = document.getElementById('mainStatus');
 // mainStatus.innerHTML = "HEAIFNALSKF";
 ref.on("value", function(snapshot) {
     console.log(snapshot.val());
-        ear.innerHTML = snapshot.val().test.drowsiness.EAR;
+        ear.innerHTML = parseFloat(snapshot.val().test.drowsiness.EAR).toFixed(4);
         fy.innerHTML = snapshot.val().test.drowsiness.frequentYawn;
         mainStatus.innerHTML = snapshot.val().test.drowsiness.status;   
         var drowsy = snapshot.val().test.drowsiness.status;
