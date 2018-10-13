@@ -13,7 +13,12 @@
     <p><b>status:</b> <span id="status"></span></p>
     <p><b>frequent Yawns:</b> <span id="fy"></span></p>
     
-    
+    <button id="notify">Push</button>
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
@@ -31,5 +36,11 @@
     </script>
 
     <script src="/firebaseData/fb.js"></script>
+    <script src="/push.js"></script>
+    <script>
+        $('#notify').click(function () {
+            Push.create('Hello World');
+        });
+    </script>
 </body>
 </html>
