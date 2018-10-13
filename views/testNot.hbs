@@ -8,36 +8,19 @@
 <body>
     <h1>Test Notifications</h1>
 
-    <button onclick="notifyMe()">Notify me!</button>
+    <button id="notify">Notify me!</button>
 
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
     <script>
-        // request permission on page load
-        document.addEventListener('DOMContentLoaded', function () {
-        if (!Notification) {
-            alert('Desktop notifications not available in your browser. Try Chromium.'); 
-            return;
-        }
-
-        if (Notification.permission !== "granted")
-            Notification.requestPermission();
-        });
-
-        function notifyMe() {
-        if (Notification.permission !== "granted")
-            Notification.requestPermission();
-        else {
-            var notification = new Notification('Notification title', {
-            icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-            body: "Hey there! You've been notified!",
+        $("#notify").click (function () {
+            console.log('Notification');
+            $.get("/sendMessage", function(data, status){
+                console.log("Data: " + data + "\nStatus: " + status);
             });
-
-            notification.onclick = function () {
-            window.open("http://stackoverflow.com/a/13328397/1269037");      
-            };
-
-        }
-
-        }
+        }); 
     </script>
 </body>
 </html>
