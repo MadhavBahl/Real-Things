@@ -15,7 +15,7 @@
 
 	<link rel="stylesheet" href="/dashboard/css/style.css">
 
-
+	<link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -98,7 +98,7 @@
 										<div class="pull-left"><i class="fa fa-html5 fa-2x"></i>
 										</div>
 										<div class="rad-notification-body">
-											<div class="lg-text">Introduction to fetch()</div>
+											<div class="lg-text">Your Current Cab Driver</div>
 											<div class="sm-text">The fetch API</div>
 										</div>
 									</a>
@@ -208,7 +208,7 @@
 						<span>Welcome {{name}} </span>
 						<small class="md-txt">Username: {{username}} , <a href="https://www.google.com/maps/place/3720+Emerald+St,+Torrance,+CA+90503/@33.8403836,-118.3543828,17z/data=!4m18!1m15!4m14!1m6!1m2!1s0x80c2b4d407f58b11:0xdedca55964c89054!2s3720+Emerald+St,+Torrance,+CA+90503!2m2!1d-118.3520761!2d33.8403792!1m6!1m2!1s0x80c2b4d407f58b11:0xdedca55964c89054!2s3720+Emerald+St,+Torrance,+CA+90503!2m2!1d-118.3520761!2d33.8403792!3m1!1s0x80c2b4d407f58b11:0xdedca55964c89054"
 							 target="_blank"><i class="fa fa-map-marker rad-txt-danger"></i> California</a></small> </header>
-					<div class="row">
+					{{!-- <div class="row">
 						<div class="col-lg-3 col-xs-6">
 							<div class="rad-info-box rad-txt-success">
 								<i class="fa fa-windows"></i>
@@ -237,12 +237,12 @@
 								<span class="value"><span>10.9K</span></span>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="panel panel-default">
+					</div> --}}
+					<div class="row ">
+						<div class="col-xs-12 hovereable">
+							<div class="panel panel-default outerDiv">
 								<div class="panel-heading">
-									<h3 class="panel-title">World Map<ul class="rad-panel-action">
+									<h3 class="panel-title">Current Ride Details<ul class="rad-panel-action">
 											<li><i class="fa fa-chevron-down"></i></li>
 											<li><i class="fa fa-rotate-right"></i></li>
 											<li><i class="fa fa-cog"></i>
@@ -251,8 +251,20 @@
 										</ul>
 									</h3>
 								</div>
-								<div class="panel-body rad-map-container">
-									<div id="world-map" class="rad-map"></div>
+								<div class="panel-body rad-map-container innerDiv">
+									<br><br>
+									{{!-- <div id="world-map" class="rad-map"></div> --}}
+									<div style="padding-left: 20px;" class="col-xs-12 col-md-6">
+									
+										<h1>EAR: <b><span id="ear"></span></b></h1>
+										<h1>Frequent Yawning: <b><span id="freq"></span></b></h1>
+										<h1>Driver Drowsy? <b><span id="mainStatus"></span></b></h1>
+									</div>
+
+									<div class="col-xs-12 col-md-4 col-md-offset-2">
+										<img src="/img.png" alt="AVATAR" class="img-responsive" />
+									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -602,7 +614,29 @@
 
 
 	<script src="/dashboard/js/index.js"></script>
+	<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script>
 
+	<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBFPAXHOjsn-ODsrSHa9TddDWp5UGhIefw",
+			authDomain: "pickle-f6850.firebaseapp.com",
+			databaseURL: "https://pickle-f6850.firebaseio.com",
+			projectId: "pickle-f6850",
+			storageBucket: "pickle-f6850.appspot.com",
+			messagingSenderId: "265744031460"
+		};
+		firebase.initializeApp(config);
+	</script>
+
+	<script src="/mainData.js"></script>
 
 
 

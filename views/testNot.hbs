@@ -18,7 +18,7 @@
     <script>
         $("#notify").click (function () {
             console.log('Notification');
-            $.get("/sendMessage", function(data, status){
+            $.get("http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=8800467915&authkey=242704A8yXSd0INO5bc24274&message=HEY! Something's Wrong!", function(data, status){
                 
             });
         }); 
