@@ -13,7 +13,7 @@ router.get ('/', function (req, res, next) {
 });
 
 router.get('/sendMessage', (req, res) => {
-	request(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=918141491833,918800467915&authkey=${process.env.SMS_API}&message=Hey Yo Dude!`, function (error, response, body) {
+	request(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=918141491833,918800467915&authkey=${process.env.SMS_API}&message=Hey BHAI sdmaslkmassCHALJAA Yo Dude!`, function (error, response, body) {
 		
 		if (error) {
 			res.status(404).send(error);
