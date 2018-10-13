@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Data</title>
+</head>
+<body>
+    
+    <h1>Firebase Data</h1>
+
+    <p><b>EAR:</b> <span id="ear"></span></p>
+    <p><b>status:</b> <span id="status"></span></p>
+    <p><b>frequent Yawns:</b> <span id="fy"></span></p>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBFPAXHOjsn-ODsrSHa9TddDWp5UGhIefw",
+            authDomain: "pickle-f6850.firebaseapp.com",
+            databaseURL: "https://pickle-f6850.firebaseio.com",
+            projectId: "pickle-f6850",
+            storageBucket: "pickle-f6850.appspot.com",
+            messagingSenderId: "265744031460"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="/firebaseData/fb.js"></script>
+</body>
+</html>

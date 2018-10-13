@@ -11,4 +11,6 @@ This repository contains the code for InOut project, "Real Things"
         ├── EAR
         ├── frequentYawns
         └── status
+    └── profinity
+    └── violence
 ```
