@@ -4,6 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Firebase Data</title>
+    <!-- PushAlert -->
+        {{!-- <script type="text/javascript">
+                (function(d, t) {
+                        var g = d.createElement(t),
+                        s = d.getElementsByTagName(t)[0];
+                        g.src = "https://cdn.pushalert.co/integrate_88536d28da0d0b10fbd70c5c5e71728f.js";
+                        s.parentNode.insertBefore(g, s);
+                }(document, "script"));
+        </script> --}}
+        <!-- End PushAlert -->
 </head>
 <body>
     
@@ -13,7 +23,7 @@
     <p><b>status:</b> <span id="status"></span></p>
     <p><b>frequent Yawns:</b> <span id="fy"></span></p>
     
-    <button id="notify">Push</button>
+    <button id="notify" onclick="notifyMe()">Push</button>
 
     <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -36,11 +46,39 @@
     </script>
 
     <script src="/firebaseData/fb.js"></script>
-    <script src="/push.js"></script>
+    <script>
+        function notifyMe() {
+            // Let's check if  the browser supports notifications
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            }
+
+            // Let's check whether notification permissions have already been granted
+            else if (Notification.permission === "granted") {
+                // If it's okay let's create a notification
+                var notification = new Notification("Hi there!");
+            }
+
+            // Otherwise, we need to ask the user for permission
+            else if (Notification.permission !== "denied") {
+                Notification.requestPermission(function (permission) {
+                // If the user accepts, let's create a notification
+                if (permission === "granted") {
+                    var notification = new Notification("Hi there!");
+                }
+                });
+            }
+
+            // At last, if the user has denied notifications, and you 
+            // want to be respectful there is no need to bother them any more.
+            }
+
+    </script>
+    {{!-- <script src="/push.js"></script>
     <script>
         $('#notify').click(function () {
             Push.create('Hello World');
         });
-    </script>
+    </script> --}}
 </body>
 </html>
