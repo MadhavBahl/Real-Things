@@ -516,7 +516,7 @@ a:active {
 }
 
 .rad-map-container {
-  height: 400px;
+  min-height: 400px;
   position: relative;
 }
 
