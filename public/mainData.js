@@ -70,7 +70,7 @@ function addPhone () {
             var ref = db.ref("test");
             var contacts = ref.child("closeContacts");
             contacts.update(toBeAdded);
-            alert ('data added!');
+            // alert ('data added!');
 
         }, function (error) {
         console.log("Error: " + error.code);
