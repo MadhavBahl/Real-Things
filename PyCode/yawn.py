@@ -63,7 +63,7 @@ def thresholdContours(mouthRegion, rectArea):
 
 	# Thresholding the image => outputs a binary image. 
 	# Convert each pixel to 255 if that pixel each exceeds 64. Else convert it to 0. 
-	ret,thresh = cv2.threshold(imgray, 64, 255, cv2.THRESH_BINARY)
+	ret, thresh = cv2.threshold(imgray, 64, 255, cv2.THRESH_BINARY)
 
 	# Finds contours in a binary image
 	# Constructs a tree like structure to hold the contours 
@@ -113,7 +113,7 @@ def yawnDetector(frame):
 		heightOneCorner = int(y + (11 * h / 16))
 		heightOtherCorner = int(y + h)
 
-		print(widthOneCorner + heightOneCorner)
+		#print(widthOneCorner + heightOneCorner)
 		# Indicate the region of interest as the mouth by highlighting it in the window.
 		cv2.rectangle(frame, (widthOneCorner, heightOneCorner), (widthOtherCorner, heightOtherCorner),(0,0,255), 2)
 	
