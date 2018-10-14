@@ -14,3 +14,8 @@ This repository contains the code for InOut project, "Real Things"
     └── profinity
     └── violence
 ```
+
+## Running backend
+
+Install all the necessary libraries first (could be found in drow.py)
+Then run drow.py
