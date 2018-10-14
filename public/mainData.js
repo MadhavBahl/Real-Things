@@ -14,17 +14,17 @@ ref.on("value", function(snapshot) {
         violence.innerHTML = snapshot.val().test.violence.violent_scenario;
         var drowsy = snapshot.val().test.drowsiness.status;
         var violent= snapshot.val().test.violence.violent_scenario;
-        // if (drowsy === "YES") {
-        //     $.get("/drowsy", function(data, status){
-        //         console.log('Inside the /drowsy');
-        //     });
-        // }
+        if (drowsy === "YES") {
+            $.get("/drowsy", function(data, status){
+                console.log('Inside the /drowsy');
+            });
+        }
 
-        // if (violent === "YES") {
-        //     $.get("/violence", function(data, status){
-        //         console.log('Inside the /violent');
-        //     });
-        // }
+        if (violent === "YES") {
+            $.get("/violence", function(data, status){
+                console.log('Inside the /violent');
+            });
+        }
     }, function (error) {
     console.log("Error: " + error.code);
 });
