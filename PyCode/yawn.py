@@ -126,8 +126,8 @@ def yawnDetector(frame):
 		if(len(mouthRegion) > 0):
 			thresholdContours(mouthRegion, rectArea)
 
-		print("Current probablity of yawn: " + str(round(ratio*1000, 2)) + "%")
-		print("Length of yawnCounter: " + str(len(yawnRatioCount)))
+		#print("Current probablity of yawn: " + str(round(ratio*1000, 2)) + "%")
+		#print("Length of yawnCounter: " + str(len(yawnRatioCount)))
     
 		if(ratio > 0.06):
 			if(isFirstTime is True):
