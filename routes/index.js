@@ -13,8 +13,10 @@ router.get('/', function (req, res, next) {
 // 	res.render ('testNot.hbs');
 // });
 
-router.get('/violence', (req, res) => {
-	unirest.post(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=918800467915&authkey=242704A8yXSd0INO5bc24274&message=DRIVER IS VIOLENT! CALL POLICE NOW!`)
+router.post('/violence', (req, res) => {
+	var mobString = req.body.mobString;
+	console.log(mobString);
+	unirest.post(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=${mobString}&authkey=242704A8yXSd0INO5bc24274&message=DRIVER IS VIOLENT! CALL POLICE NOW!`)
 		.headers({'Accept': 'application/json'})
 		.end(function (response) {
 			console.log('response is: ', response.body);
@@ -22,8 +24,9 @@ router.get('/violence', (req, res) => {
 		});
 });
 
-router.get('/drowsy', (req, res) => {
-	unirest.post(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=918800467915&authkey=242704A8yXSd0INO5bc24274&message=HEY! The driver is feeling sleepy! TAKE ACTION NOW!!!!`)
+router.post('/drowsy', (req, res) => {
+	var mobString = req.body.mobString;
+	unirest.post(`http://api.msg91.com/api/sendhttp.php?country=91&sender=MSGIND&route=4&mobiles=${mobString}&authkey=242704A8yXSd0INO5bc24274&message=HEY! The driver is feeling sleepy! TAKE ACTION NOW!!!!`)
 		.headers({'Accept': 'application/json'})
 		.end(function (response) {
 			res.render('dashboard.hbs');

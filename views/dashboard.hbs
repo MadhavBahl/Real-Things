@@ -312,19 +312,20 @@
 								</div>
 								<div class="panel-body">
 									<div id="lineChart" style="display: none;" class="rad-chart"></div>
+									<br>
 									<form action="/action_page.php">
 										<div class="form-group">
-											<label for="email">Email:</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+											<label for="email">Name:</label>
+											<input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
 										</div>
 											<div class="form-group">
-											<label for="pwd">Password:</label>
-											<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+											<label for="pwd">Phone Number:</label>
+											<input type="text" class="form-control" id="mobile" placeholder="Enter Phone Number (with country code)" name="mobile">
 										</div>
 										<div class="checkbox">
-											<label><input type="checkbox" name="remember"> Remember me</label>
+											{{!-- <label><input type="checkbox" name="remember"> Remember me</label> --}} <br><br>
 										</div>
-										<button type="submit" class="btn btn-default">Submit</button>
+										<button onclick="addPhone()" class="btn btn-default">Submit</button>
 									</form>
 								</div>
 							</div>
