@@ -62,20 +62,20 @@ $(function() {
 		e.stopPropagation();
 	});
 
-	$('.rad-chat-body').slimScroll({
-		height: '450px',
-		color: "#c6c6c6"
-	});
+	// $('.rad-chat-body').slimScroll({
+	// 	height: '450px',
+	// 	color: "#c6c6c6"
+	// });
 
-	$('.rad-timeline-body').slimScroll({
-		height: '450px',
-		color: '#c6c6c6'
-	});
+	// $('.rad-timeline-body').slimScroll({
+	// 	height: '450px',
+	// 	color: '#c6c6c6'
+	// });
 	
-	$('.rad-activity-body').slimScroll({
-		height: '250px',
-		color: '#c6c6c6'
-	});
+	// $('.rad-activity-body').slimScroll({
+	// 	height: '250px',
+	// 	color: '#c6c6c6'
+	// });
 
 	$(".rad-toggle-btn").on('click', function() {
 		$(".rad-logo-container").toggleClass("rad-nav-min");
@@ -455,19 +455,19 @@ var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 	],
 	data = [{
-		"label": "Technology",
+		"label": "Places Visited",
 		"value": 20
 	}, {
-		"label": "Financial",
+		"label": "Places Visited",
 		"value": 45
 	}, {
-		"label": "Industrial Goods",
+		"label": "Places Visited",
 		"value": 30
 	}, {
-		"label": "Consumer Goods",
+		"label": "Places Visited",
 		"value": 10
 	}, {
-		"label": "Basic Materials",
+		"label": "Places Visited",
 		"value": 5
 	}];
 
