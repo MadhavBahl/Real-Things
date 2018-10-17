@@ -13,11 +13,13 @@ Corporate Driver Management System
         └── status
     └── profinity
     └── violence
+        └── driver_violent
 ```
 
 ## About Real Things
 
-
+RealThings is a product which aims to make cab travel completely safe. Safety within cabs is a major concern these day even in case of big companies like Ola and Uber.
+Through our product we focussed on several major issues like accidents caused by carelessness of driver (he might be drunk or sleepy), quarrels and fights between passenger and the driver. 
 
 ## The Problem it solves
 
