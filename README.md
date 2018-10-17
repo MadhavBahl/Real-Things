@@ -58,3 +58,17 @@ The following command line arguments are available :
 The model files have been included. The graph "retrained_graph_yawn.pb" and its label has been provided, with which we can detect yawns instead of violence (update required)
 
 Requirements : scipy, imutils, numpy, dlib, opencv, pyrebase, python3.5 or later.
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/26179770/47061422-053be380-d1ef-11e8-892c-bf3760fc5f0e.png)
+
+![image](https://user-images.githubusercontent.com/26179770/47061599-ca867b00-d1ef-11e8-81d3-2537dc7c5d69.png)
+
+![image](https://user-images.githubusercontent.com/26179770/47061620-e853e000-d1ef-11e8-873a-d0ffb99f1c2b.png)
+
+![image](https://user-images.githubusercontent.com/26179770/47061651-12a59d80-d1f0-11e8-8a3a-ba24df53d64b.png)
+
+![image](https://user-images.githubusercontent.com/26179770/47061694-42ed3c00-d1f0-11e8-9029-09d496efe66f.png)
+
+![image](https://user-images.githubusercontent.com/26179770/47061771-9495c680-d1f0-11e8-94de-ce3d841efe98.png)
